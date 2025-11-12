@@ -22,7 +22,12 @@ const DashboardLayout = ({ user, logout }) => {
         opacity: 0.7,
         zIndex: '-1',
       }}></div>
-    <aside className="sidebar">
+    <aside className="sidebar" 
+      style={{
+        overflowY: user.isAdmin ? 'auto' : 'visible',
+        maxHeight: '100vh'
+      }}
+    >
         <h2>🅿️ Smart Parking</h2>
         <button onClick={() => navigate('/app/profile')}>👤 Profile</button>
         {!user.isAdmin ? (
