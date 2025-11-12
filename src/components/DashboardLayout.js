@@ -24,8 +24,7 @@ const DashboardLayout = ({ user, logout }) => {
       }}></div>
     <aside className="sidebar" 
       style={{
-        overflowY: user.isAdmin ? 'auto' : 'visible',
-        maxHeight: '100vh'
+        overflowY: user.isAdmin ? 'auto' : 'visible'
       }}
     >
         <h2>🅿️ Smart Parking</h2>
