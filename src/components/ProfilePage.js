@@ -12,7 +12,7 @@ const ProfilePage = () => {
   useEffect(() => {
     if (storedUser.photo) {
       const fullPath = storedUser.photo.startsWith('/uploads')
-        ? `http://localhost:5000${storedUser.photo}`
+        ? `https://backend-c9pq.onrender.com${storedUser.photo}`
         : storedUser.photo;
       setPreview(fullPath);
     }
@@ -42,7 +42,7 @@ const ProfilePage = () => {
       });
 
       const fullPath = res.data.photo?.startsWith('/uploads')
-        ? `http://localhost:5000${res.data.photo}`
+        ? `https://backend-c9pq.onrender.com${res.data.photo}`
         : res.data.photo;
 
       const updatedUser = { ...res.data, photo: fullPath };

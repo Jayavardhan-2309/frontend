@@ -22,7 +22,7 @@ const login = async () => {
       ...user,
       photo: user.photo
         ? user.photo.startsWith('/uploads')
-          ? `http://localhost:5000${user.photo}`
+          ? `https://backend-c9pq.onrender.com${user.photo}`
           : user.photo
         : ''
     };
